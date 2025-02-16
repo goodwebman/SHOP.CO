@@ -1,0 +1,83 @@
+.container {
+	max-width: 1200px;
+	padding: 0 16px;
+	margin: 0 auto;
+}
+
+.burger_nav {
+	display: flex;
+	gap: 16px;
+	align-items: center;
+
+	& img {
+		width: 126px;
+		height: 18px;
+	}
+}
+
+.navigation {
+	display: flex;
+	justify-content: space-between;
+	
+	align-items: center;
+	padding: 27px 0;
+}
+
+
+
+.nav__list {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 24px;
+}
+
+
+.buttons__section {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+}
+
+
+
+
+
+
+.searchMenu {
+	display: flex;
+	align-items: center;
+	
+	
+	padding: 5px;
+	overflow: hidden;
+	transition: all 0.3s ease-in-out;
+  }
+  
+  .searchIcon {
+	width: 20px;
+	height: 20px;
+	margin-right: 5px;
+	cursor: pointer;
+	transition: all 0.3s ease-in-out;
+
+	
+  }
+  
+  
+  .searchInput {
+	border: none;
+	outline: none;
+	font-size: 14px;
+	transition: width 0.3s ease-in-out, opacity 0.3s ease-in-out, padding 0.3s ease-in-out;
+	width: 0;
+	padding: 0;
+	opacity: 0;
+	background-color: transparent; // Ensure no background color initially
+  }
+  
+  .searchInput.active {
+	width: 200px;
+	
+	opacity: 1;
+  }
