@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import BurgerMenu from '../BurgerMenu/BurgerMenu'
 import styles from './Navigation.module.scss'
+
 import busketNav from '/busket-nav.png'
 import logo from '/logo.png'
 import userNav from '/user-nav.png'
