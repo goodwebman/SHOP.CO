@@ -10,27 +10,44 @@
 	align-items: center;
 
 	& img {
-		width: 126px;
-		height: 18px;
+		min-width: 126px;
+		min-height: 18px;
 	}
 }
 
 .navigation {
 	display: flex;
 	justify-content: space-between;
-	
+	min-height: 100px;
 	align-items: center;
 	padding: 27px 0;
+	gap:20px;
 }
-
-
 
 .nav__list {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	gap: 24px;
+	text-wrap: nowrap;
+	
 }
+
+@media (max-width: 780px) {
+	.nav__list {
+		gap:12px;
+	}
+}
+
+@media (max-width: 760px) {
+	.nav__list {
+		display: none;
+		
+	}
+}
+
+
+
 
 
 .buttons__section {
@@ -39,45 +56,89 @@
 	gap: 12px;
 }
 
-
-
-
-
+.nav__buttons img {
+	min-width: 20px;
+	min-height: 20px;
+}
 
 .searchMenu {
 	display: flex;
 	align-items: center;
-	
-	
 	padding: 5px;
 	overflow: hidden;
 	transition: all 0.3s ease-in-out;
-  }
-  
-  .searchIcon {
+}
+
+.searchMenu.active {
+	background-color: #f0f0f0;
+	padding: 12px;
+	border-radius: 50px;
+	gap: 12px;
+}
+
+.searchIcon {
 	width: 20px;
 	height: 20px;
-	margin-right: 5px;
 	cursor: pointer;
 	transition: all 0.3s ease-in-out;
+	fill: black;
+}
+.searchIcon.inactive {
+	opacity: 1; 
+}
 
-	
-  }
-  
-  
-  .searchInput {
+.searchIcon.active {
+	opacity: 0.6;
+}
+
+.searchInput {
 	border: none;
 	outline: none;
 	font-size: 14px;
-	transition: width 0.3s ease-in-out, opacity 0.3s ease-in-out, padding 0.3s ease-in-out;
+	transition: width 0.3s ease-in-out, opacity 0.3s ease-in-out,
+		padding 0.3s ease-in-out;
 	width: 0;
-	padding: 0;
 	opacity: 0;
-	background-color: transparent; // Ensure no background color initially
-  }
-  
-  .searchInput.active {
-	width: 200px;
 	
+}
+
+.searchInput.active {
+	width: 500px;
 	opacity: 1;
-  }
+}
+
+@media (max-width: 1130px) {
+	.searchInput.active {
+		width: 350px;
+	}
+}
+
+@media (max-width: 990px) {
+	.searchInput.active {
+		width: 280px;
+	}
+}
+
+@media (max-width:850px) {
+	.searchInput.active {
+		width: 200px;
+	}
+}
+
+@media (max-width:550px) {
+	.searchMenu.active {
+		width: 210px;
+	}
+	.navigation {
+		gap:12px;
+	}
+}
+
+
+@media (max-width:470px) {
+	.xs__hidden {
+		display: none;
+	}
+}
+
+
