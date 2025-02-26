@@ -1,0 +1,42 @@
+.container {
+    composes: container from './../../index.css'
+}
+
+.brands {
+    background: #000;
+
+
+    &__block {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        
+        padding: 44px 0;
+
+    }
+
+    @media(max-width: 1280px) {
+        &__block {
+               flex-wrap: wrap;  
+                gap: 50px;
+                justify-content:center;
+        }
+
+        &__block img {
+            
+            max-width: 160px;
+    
+        }
+    }
+
+    @media(max-width:475px) {
+        &__block img {
+            scale: 0.6;
+    
+        }
+
+        &__block {
+            gap: 10px;
+        }
+    }
+}

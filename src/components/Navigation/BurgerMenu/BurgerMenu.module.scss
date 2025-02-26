@@ -4,6 +4,7 @@
 	width: 24px;
 	height: 24px;
     z-index: 50;
+    
 
 	& span {
 		position: absolute;
@@ -61,7 +62,7 @@
     
     top: 0;
     left: 0;
-    position: absolute;
+    position:absolute;
     display: flex;
     flex-direction: column;
     gap: 50px;
@@ -69,11 +70,14 @@
     margin: 0;
     background-color: black;
     width: 100%;
+    height: 100%;
     padding:100px;
+    overflow: hidden;
+    z-index: 30;
     
     transform: translateX(-100%);
     transition: .3s;
-    height: 100%;
+    
 
     &__active {
         

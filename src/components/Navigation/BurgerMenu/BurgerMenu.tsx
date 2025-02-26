@@ -6,6 +6,8 @@ const BurgerMenu = () => {
 	const handleToggle = () => {
 		setBurgerToggle(!burgerToggle)
 	}
+
+	
 	return (
 		<>
 			<button

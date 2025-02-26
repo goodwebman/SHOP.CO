@@ -8,9 +8,8 @@
 
 .main__block {
 	display: flex;
-    align-items: center;
+	align-items: center;
 	gap: 120px;
-    
 
 	@media (max-width: 1500px) {
 		gap: 20px;
@@ -22,11 +21,10 @@
 	}
 
 	&_info {
-       
 		display: flex;
 		flex-direction: column;
 		padding-top: 103px;
-        padding-bottom: 116px;
+		padding-bottom: 116px;
 
 		&_title {
 			font-family: IntegralCF;
@@ -84,8 +82,6 @@
 			align-items: center;
 			padding-top: 48px;
 			gap: 32px;
-			
-			
 
 			&_item {
 				display: flex;
@@ -105,16 +101,16 @@
 					}
 				}
 
-                & {
-                    flex-wrap: wrap;
-                }
+				& {
+					flex-wrap: wrap;
+				}
 			}
 
-            @media (max-width:1300px) {
-                & {
-                    margin-bottom: 0;
-                }
-            }
+			@media (max-width: 1300px) {
+				& {
+					margin-bottom: 0;
+				}
+			}
 
 			&_item h2 {
 				font-weight: 700;
@@ -158,46 +154,63 @@
 		}
 	}
 
-	&_image  {
-        position: relative;
-        display: flex;
-		margin-top: auto;
-		min-width: 570px;
-       
-
-        &::after {
-            content: '';
-            position: absolute;
-            background-image: url(/star-after.png);
-            width: 56px;
-            height: 56px;
-            left: 0;
-            top:270px;
-        }
-
-        &::before {
-            content: '';
-            position: absolute;
-            background-image: url(/star-before.png);
-            width: 104px;
-            height: 104px;
-            right: 0;
-            top:70px;
-            
-        }
+	@media(max-width:660px) {
+		&_info {
+			padding-bottom: 0;
+		}
 	}
 
-    @media(max-width:600px) {
-        &_image   {
-            min-width: auto;
-            justify-content: center;
-            
-        }
+	&_image {
+		position: relative;
+		display: flex;
+		margin-top: auto;
+		min-width: 570px;
 
-        &_image img  {
-            width: 70%;
-            align-items: center;
-            
-        }
-    }
+		&::after {
+			content: '';
+			position: absolute;
+			background-image: url(/star-after.png);
+			width: 56px;
+			height: 56px;
+			left: 0;
+			top: 270px;
+		}
+
+		&::before {
+			content: '';
+			position: absolute;
+			background-image: url(/star-before.png);
+			width: 104px;
+			height: 104px;
+			right: 0;
+			top: 70px;
+		}
+
+		@media (max-width: 530px) {
+			&::after {
+				left: 0;
+				top: 90px;
+				scale: 0.7;
+			}
+
+			&::before {
+				
+				
+				top: 0;
+				scale: 0.7;
+			}
+		}
+	}
+
+	@media (max-width: 600px) {
+		&_image {
+			min-width: auto;
+			justify-content: center;
+		}
+
+		&_image img {
+			width: 70%;
+			align-items: center;
+		}
+	}
 }
